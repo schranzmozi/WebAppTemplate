@@ -1,0 +1,18 @@
+{
+  "ios": {
+    "development": {
+      "developmentTeam": "MY_TEAM",
+      "codeSignIdentity": "iPhone Developer"
+    },
+    "release": {
+      "developmentTeam": "MY_TEAM",
+      "codeSignIdentity": "iPhone Developer"
+    }
+  },
+  "android": {
+    "release": {
+      "keystore": "my.keystore",
+      "alias": "my"
+    }
+  }
+}

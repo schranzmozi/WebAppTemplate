@@ -1,0 +1,319 @@
+<html lang=en-GB>
+      <head>
+  <!-- inject:cordova-csp -->
+  <!-- inject:cordova-script -->
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+		<base href="/">
+        <meta http-equiv="cleartype" content="on">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
+        <link rel="shortcut icon" sizes="196x196" href="img/touch/touch-icon-196x196.png">
+        <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <meta name="msapplication-TileColor" content="#222222">
+
+        <!-- SEO: If mobile URL is different from desktop URL, add a canonical link to the desktop page -->
+        <!--
+        <link rel="canonical" href="http://www.example.com/" >
+        -->
+
+        <!-- Add to homescreen for Chrome on Android -->
+        <!--
+        <meta name="mobile-web-app-capable" content="yes">
+        -->
+
+        <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
+        <!--
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="">
+        -->
+
+        <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
+        <!--
+        <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+        -->
+
+		<!-- build:css -->
+        <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
+        <link rel="stylesheet" href="styles/framework7.min.css">
+        <link rel="stylesheet" href="styles/framework7.md.min.css">
+        <link rel="stylesheet" href="styles/icons.css">
+        <link rel="stylesheet" href="styles/main.css">
+		<!-- endbuild -->
+		<meta name="msapplication-TileColor" content="#2196F3">
+		<meta name="theme-color" content="#2196F3">
+		<meta property="og:title" content="Air Horn">
+		<meta property="og:type" content="website">
+		<meta property=og:image content=https://airhorner.com/images/touch/Airhorner_192.png>
+		<meta property=og:url content="https://airhorner.com/">
+		<meta property=og:description content="The best and easiest Air Horn web app there is. No install just use it right away in your browser!">
+		<meta name=twitter:card content=summary>
+		<meta name=twitter:url content="https://airhorner.com/">
+		<meta name=twitter:title content="Air Horn">
+		<meta name=twitter:description content="The best and easiest Air Horn web app there is. No install just use it right away in your browser!">
+		<meta name=twitter:image content=https://airhorner.com/images/touch/Airhorner_192.png>
+		<meta name=twitter:creator content=@paul_kinlan>
+      </head>
+      
+      <body>
+
+        <!-- Add your site or application content here -->
+	 <!-- App root element -->
+  <div id="app">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar"></div>
+    <!-- Left panel with cover effect-->
+    <div class="panel panel-left panel-cover theme-dark">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Left Panel</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">Left panel content goes here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Right panel with reveal effect-->
+    <div class="panel panel-right panel-reveal theme-dark">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Right Panel</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">Right panel content goes here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Views/Tabs container -->
+    <div class="views tabs ios-edges">
+      <!-- Tabbar for switching views-tabs -->
+      <div class="toolbar tabbar-labels toolbar-bottom-md">
+        <div class="toolbar-inner">
+          <a href="#view-home" class="tab-link tab-link-active">
+            <i class="icon f7-icons ios-only">home</i>
+            <i class="icon f7-icons ios-only icon-ios-fill">home_fill</i>
+            <i class="icon material-icons md-only">home</i>
+            <span class="tabbar-label">Home</span>
+          </a>
+          <a href="#view-catalog" class="tab-link">
+            <i class="icon f7-icons ios-only">list</i>
+            <i class="icon f7-icons ios-only icon-ios-fill">list_fill</i>
+            <i class="icon material-icons md-only">view_list</i>
+            <span class="tabbar-label">Catalog</span>
+          </a>
+          <a href="#view-settings" class="tab-link">
+            <i class="icon f7-icons ios-only">settings</i>
+            <i class="icon f7-icons ios-only icon-ios-fill">settings_fill</i>
+            <i class="icon material-icons md-only">settings</i>
+            <span class="tabbar-label">Settings</span>
+          </a>
+        </div>
+      </div>
+      <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
+      <div id="view-home" class="view view-main tab tab-active">
+        <!-- Page, data-name contains page name which can be used in page callbacks -->
+        <div class="page" data-name="home">
+          <!-- Top Navbar -->
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="left">
+                <a href="#" class="link icon-only panel-open" data-panel="left">
+                  <i class="icon f7-icons ios-only">menu</i>
+                  <i class="icon material-icons md-only">menu</i>
+                </a>
+              </div>
+              <div class="title sliding">Home</div>
+              <div class="right">
+                <a href="#" class="link icon-only panel-open" data-panel="right">
+                  <i class="icon f7-icons ios-only">menu</i>
+                  <i class="icon material-icons md-only">menu</i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scrollable page content-->
+          <div class="page-content">
+            <div class="block block-strong">
+              <p>This is an example of tabs-layout application. The main point of such tabbed layout is that each tab contains independent view with its own routing and navigation.</p>
+              <p>Each tab/view may have different layout, different navbar type (dynamic, fixed or static) or without navbar like this tab.</p>
+            </div>
+
+            <div class="block-title">Navigation</div>
+            <div class="list">
+              <ul>
+                <li>
+                  <a href="/about/" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title">About</div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="block-title">Modals</div>
+            <div class="block block-strong">
+              <div class="row">
+                <div class="col-50">
+                  <a href="#" class="button button-raised button-fill popup-open" data-popup="#my-popup">Popup</a>
+                </div>
+                <div class="col-50">
+                  <a href="#" class="button button-raised button-fill login-screen-open" data-login-screen="#my-login-screen">Login Screen</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="block-title">Panels</div>
+            <div class="block block-strong">
+              <div class="row">
+                <div class="col-50">
+                  <a href="#" class="button button-raised button-fill panel-open" data-panel="left">Left Panel</a>
+                </div>
+                <div class="col-50">
+                  <a href="#" class="button button-raised button-fill panel-open" data-panel="right">Right Panel</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="block-title searchbar-hide-on-search">Page Loaders & Router</div>
+            <div class="list links-list searchbar-hide-on-search">
+              <ul>
+                <li>
+                  <a href="/page-loader-template7/vladimir/123/about-me/1/?start=0&end=30#top">Template7 Page</a>
+                </li>
+                <li>
+                  <a href="/page-loader-component/vladimir/123/about-me/1/?start=0&end=30#top">Component Page</a>
+                </li>
+                <li>
+                  <a href="/load-something-that-doesnt-exist/">Default Route (404)</a>
+                </li>
+                <li>
+                  <a href="/request-and-load/user/123456/">Request Data & Load</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Catalog View -->
+      <div id="view-catalog" class="view tab">
+        <!-- Catalog page will be loaded here dynamically from /catalog/ route -->
+      </div>
+
+      <!-- Settings View -->
+      <div id="view-settings" class="view tab">
+        <!-- Settings page will be loaded here dynamically from /settings/ route -->
+      </div>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup" id="my-popup">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Popup</div>
+              <div class="right">
+                <a href="#" class="link popup-close">Close</a>
+              </div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+              <p>Popup content goes here.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Screen -->
+    <div class="login-screen" id="my-login-screen">
+      <div class="view">
+        <div class="page">
+          <div class="page-content login-screen-content">
+            <div class="login-screen-title">Login</div>
+            <div class="list">
+              <ul>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Username</div>
+                    <div class="item-input-wrap">
+                      <input type="text" name="username" placeholder="Your username">
+                    </div>
+                  </div>
+                </li>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Password</div>
+                    <div class="item-input-wrap">
+                      <input type="password" name="password" placeholder="Your password">
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="list">
+              <ul>
+                <li>
+                  <a href="#" class="item-link list-button login-button">Sign In</a>
+                </li>
+              </ul>
+              <div class="block-footer">Some text about login information.<br>Click "Sign In" to close Login Screen</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+		
+		<!-- build:js -->
+        <script src="scripts/vendor/framework7.min.js"></script>
+		<script src="scripts/vendor/jquery-2.1.0.min.js"></script>
+        <script src="scripts/helper.js"></script>
+        <script src="scripts/routes.js"></script>
+        <script src="scripts/main.js"></script>
+		<!-- endbuild -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+		<script>
+		if ('serviceWorker' in navigator) {
+		  navigator.serviceWorker.register('/sw.js').then(function() { 
+			console.log("Service Worker Registered"); 
+		  });
+		}
+		</script>
+      </body>
+
+</html>
